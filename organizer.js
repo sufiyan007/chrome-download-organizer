@@ -10,7 +10,7 @@ const types = {
 
 const folderPath = process.argv[2];
 if (!folderPath) {
-  console.log("⚠️ Please provide a folder path!");
+  console.log("Please provide a folder path!");
   process.exit(1);
 }
 
@@ -37,7 +37,7 @@ files.forEach((file) => {
   const destPath = path.join(destFolder, file);
   fs.renameSync(srcPath, destPath);
 
-  console.log(`✅ Moved ${file} → ${category}`);
+  console.log(`Moved ${file} → ${category}`);
 });
 
-console.log("🎉 All files organized successfully!");
+console.log("All files organized successfully!");
